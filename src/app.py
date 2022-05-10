@@ -33,6 +33,7 @@ def handle_hello():
 @app.route('/member/<int:member_id>', methods=['GET'])
 def get_member_id(member_id):
     response = jackson_family.get_member(member_id)
+
     return jsonify(response), 200
 
 
